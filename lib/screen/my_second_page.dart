@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/screen/my_second_page.dart';
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+import 'my_home_page.dart';
+
+class MySecondPage extends StatelessWidget {
+  const MySecondPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,20 +13,20 @@ class MyHomePage extends StatelessWidget {
       drawer: const Drawer(
         child: Text("My dd"),
       ),
-      appBar: AppBar(title: Text("My Home Page")),
+      appBar: AppBar(title: Text("My Home Page2")),
       body: Center(
           child: Column(
         children: [
           Text("Hellow RMUTL"),
           ElevatedButton(
             onPressed: () {
-              Navigator.of(context).push(
+              Navigator.of(context).pop(
                 MaterialPageRoute(
-                  builder: (context) => MySecondPage(),
+                  builder: (context) => MyHomePage(),
                 ),
               );
             },
-            child: const Text("ไปยังหน้าสอง1"),
+            child: const Text("ไปยังหน้าหนึ่ง2"),
           )
         ],
       )),
